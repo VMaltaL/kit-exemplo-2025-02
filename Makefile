@@ -9,9 +9,12 @@ all: paper/paper.pdf resultados/numero_de_dados.txt
 clean: 
 	rm -r -f resultados dados figuras paper/paper.pdf
 
-	
+
 paper/paper.pdf: paper/paper.tex figuras/variacao_temperatura.png
 	tectonic -X compile paper/paper.tex
+	
+paper/paper.tex: dados/temperature-data.zip code/lista_paises.py
+	python code/lista_paises.py dados/temperatura/>paper/paises.tex
 	
 resultados/numero_de_dados.txt: dados/temperature-data.zip
 	mkdir -p resultados
