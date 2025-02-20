@@ -5,6 +5,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass{article}
 
+\usepackage[brazil]{babel}
 
 
 
@@ -14,7 +15,51 @@
 \begin{document}
 %ambiente é o que está entre o begin e o end
 
+\title{Análise de variação de temperatura dos últimos 5 anos}
+
+\author{Victoria Malta P de Lima}
+
+\maketitle
+
 Meu artigo bem legal.
 
+\begin{abstract}
+Resumo babilônico.
+
+\end{abstract}
+
+%formato de um label
+%{eq:nome-eq} - se for uma equação
+%{fig:nome-fig} - se for figura
+\section{Introdução}
+
+Isso vai ser a minha introdução.
+Outra frase da introdução
+
+Esse será outro parágrafo da introdução.
+
+\section{Metodologia}
+
+Aqui vou descrever tudo que fiz.
+Ajustamos uma reta aos cinco últimos anos dos dados de temperatura média
+mensal para cada país.
+Assim calculamos uma taxa de variação da temperatura recente.
+
+A equação da reta é
+
+\begin{equation} 
+T(t) = a t + b,
+\label{eq-reta}
+\end{equation}
+
+\noindent %tira a identação
+onde $T$ é a temperatura, $t$ minúsculo é o tempo, $a$ é o coeficiente angular e $b$ é o coeficiente linear.
+
+Utilizamos a equação \ref{eq-reta} em código Python para fazer o ajuste da 
+reta com o método dos mínimos quadrados.
+Isso esta descrito na seção \ref{Metodologia}.
+
+%sifrão demarca o começo da equação que fica no meio do texto
+%deve se colocar vírgula depois da equação
 
 \end{document}
