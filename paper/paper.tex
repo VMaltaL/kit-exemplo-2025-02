@@ -6,6 +6,7 @@
 \documentclass{article}
 
 \usepackage[brazil]{babel}
+\usepackage{graphicx}
 
 
 
@@ -61,5 +62,23 @@ Isso esta descrito na seção \ref{Metodologia}.
 
 %sifrão demarca o começo da equação que fica no meio do texto
 %deve se colocar vírgula depois da equação
+
+
+\section{Resultados}
+
+Um monte de coisa.
+
+\begin{figure}[tb!] 
+	\includegraphics{../figuras/variacao_temperatura.png}
+	\caption{
+	Variação de temperatura média anual dos últimos cinco anos:
+	a) Países com as cinco maiores variações de temperatura.
+	a) Países com as cinco menores variações de temperatura.
+	}
+	\label{fig:variacao}
+\end{figure}
+
+Veja a figura \ref{fi:variacao}.
+
 
 \end{document}
